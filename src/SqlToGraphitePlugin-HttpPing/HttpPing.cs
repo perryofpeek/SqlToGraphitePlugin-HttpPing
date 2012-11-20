@@ -7,15 +7,17 @@ namespace SqlToGraphitePlugin_HttpPing
 {
     public class HttpPing : PluginBase
     {
-
+        [Help("metirc namespace path")]
         public string Path { get; set; }
 
+        [Help("Address of the proxy server (leave blank to bypass)")]
         public string Proxy { get; set; }
 
+        [Help("Uri of the destination to http get")]
         public string Uri { get; set; }
 
         public override string Name { get; set; }
-
+        
         public override string ClientName { get; set; }
 
         public override string Type { get; set; }
